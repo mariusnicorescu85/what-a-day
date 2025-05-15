@@ -1,0 +1,19 @@
+# The version of APIs your extension will receive
+api_version = "2025-04"
+
+[[extensions]]
+type = "ui_extension"
+name = "what-a-day-admin"
+handle = "what-a-day-admin"
+description = "A react Admin UI extension"
+
+# Controls where in Admin your extension will be injected,
+# and the file that contains your extension's source code.
+[[extensions.targeting]]
+module = "./src/Extension.jsx"
+target = "admin.order-details.block.render"
+
+# If you want to add another component like a modal, you can add another targeting section
+# [[extensions.targeting]]
+# module = "./src/Modal.jsx"
+# target = "admin.apps.modal.render"

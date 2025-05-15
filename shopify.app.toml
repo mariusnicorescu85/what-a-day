@@ -3,7 +3,7 @@
 client_id = "f0aed96fdbd9d2d50b2eabaf47c737de"
 name = "what-a-day-to-be-alive"
 handle = "what-a-day-to-be-alive-1"
-application_url = "https://exempt-holdem-bolivia-bow.trycloudflare.com"
+application_url = "https://manufacturers-sense-foto-durham.trycloudflare.com"
 embedded = true
 
 [build]
@@ -27,9 +27,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://exempt-holdem-bolivia-bow.trycloudflare.com/auth/callback",
-  "https://exempt-holdem-bolivia-bow.trycloudflare.com/auth/shopify/callback",
-  "https://exempt-holdem-bolivia-bow.trycloudflare.com/api/auth/callback"
+  "https://manufacturers-sense-foto-durham.trycloudflare.com/auth/callback",
+  "https://manufacturers-sense-foto-durham.trycloudflare.com/auth/shopify/callback",
+  "https://manufacturers-sense-foto-durham.trycloudflare.com/api/auth/callback"
 ]
 
 [pos]

@@ -6,9 +6,13 @@ export const loader = async ({ request }) => {
 };
 
 export default function AdminDashboardPage() {
+
+  const dashboardUrl = process.env.NODE_ENV === 'development' 
+    ? 'http://localhost:5174' 
+    : 'https://what-a-day-pos.herokuapp.com/extensions/admin';
   return (
     <iframe
-      src="http://localhost:5174"
+      src={dashboardUrl}
       style={{
         width: '100%',
         height: 'calc(100vh - 60px)',

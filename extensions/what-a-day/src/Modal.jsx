@@ -17,7 +17,7 @@ const ACTIONS = {
 }
 
 // Use your current development URL
-const APP_URL = 'https://manufacturers-sense-foto-durham.trycloudflare.com';
+const APP_URL = 'https://what-a-day-pos-4c4447aa66ac.herokuapp.com';
 
 // Test connection function
 const testConnection = async () => {

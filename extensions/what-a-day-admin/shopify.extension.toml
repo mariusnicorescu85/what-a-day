@@ -11,7 +11,7 @@ description = "A react Admin UI extension"
 # and the file that contains your extension's source code.
 [[extensions.targeting]]
 module = "./src/Extension.jsx"
-target = "admin.order-details.block.render"
+target = "admin.product-details.action.render"
 
 # If you want to add another component like a modal, you can add another targeting section
 # [[extensions.targeting]]

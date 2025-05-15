@@ -1,28 +1,34 @@
-import { json } from "@remix-run/node";
+// app/routes/app.admin.dashboard.jsx
+import { Page, Layout, Card } from '@shopify/polaris';
+import { TitleBar } from '@shopify/app-bridge-react';
+import { useEffect } from 'react';
 
-export const loader = async ({ request }) => {
-  // Skip authentication for now
-  return json({});
-};
+export default function AdminDashboard() {
+  useEffect(() => {
+    // Dynamically import and mount the component
+    import('../components/time-tracking-admin.jsx').then((module) => {
+      const TimeTrackingAdmin = module.default;
+      const root = document.getElementById('time-tracking-admin-root');
+      if (root) {
+        const { createRoot } = require('react-dom/client');
+        const rootElement = createRoot(root);
+        rootElement.render(<TimeTrackingAdmin />);
+      }
+    });
+  }, []);
 
-export default function AdminDashboardPage() {
-
-  const dashboardUrl = 'https://what-a-day-pos-4c4447aa66ac.herokuapp.com/';
   return (
-    <iframe
-      src={dashboardUrl}
-      style={{
-        width: '100%',
-        height: 'calc(100vh - 60px)',
-        border: 'none',
-        margin: 0,
-        padding: 0
-      }}
-      title="Time Tracking Admin Dashboard"
-    />
+    <Page>
+      <TitleBar title="Time Tracking Admin" />
+      <Layout>
+        <Layout.Section>
+          <Card>
+            <div id="time-tracking-admin-root" style={{ minHeight: '600px' }}>
+              {/* Component will mount here */}
+            </div>
+          </Card>
+        </Layout.Section>
+      </Layout>
+    </Page>
   );
-}
-
-export function ErrorBoundary() {
-  return <div>An error occurred loading the admin dashboard.</div>;
 }

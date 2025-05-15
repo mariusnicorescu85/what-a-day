@@ -1,9 +1,8 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
-
 client_id = "f0aed96fdbd9d2d50b2eabaf47c737de"
 name = "what-a-day-to-be-alive"
 handle = "what-a-day-to-be-alive-1"
-application_url = "https://manufacturers-sense-foto-durham.trycloudflare.com"
+application_url = "https://what-a-day-pos-4c4447aa66ac.herokuapp.com"
 embedded = true
 
 [build]
@@ -12,11 +11,9 @@ automatically_update_urls_on_dev = true
 
 [webhooks]
 api_version = "2025-04"
-
   [[webhooks.subscriptions]]
   topics = [ "app/uninstalled" ]
   uri = "/webhooks/app/uninstalled"
-
   [[webhooks.subscriptions]]
   topics = [ "app/scopes_update" ]
   uri = "/webhooks/app/scopes_update"
@@ -27,10 +24,13 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://manufacturers-sense-foto-durham.trycloudflare.com/auth/callback",
-  "https://manufacturers-sense-foto-durham.trycloudflare.com/auth/shopify/callback",
-  "https://manufacturers-sense-foto-durham.trycloudflare.com/api/auth/callback"
+  "https://what-a-day-pos-4c4447aa66ac.herokuapp.com/auth/callback",
+  "https://what-a-day-pos-4c4447aa66ac.herokuapp.com/auth/shopify/callback",
+  "https://what-a-day-pos-4c4447aa66ac.herokuapp.com/api/auth/callback"
 ]
 
 [pos]
 embedded = false
+
+[session_storage]
+type = "memory"
